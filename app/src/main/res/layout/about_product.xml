@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:style="http://schemas.android.com/tools">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
 
 
         <LinearLayout
@@ -31,7 +31,35 @@
                 android:layout_marginTop="5dp"
                 android:text="Mahindra vandi is a good vandi it can carry heavy load and travel long distances easily" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:onClick="checkReview"
+                android:text="Reviews: "
+                android:textColor="#3f8bd7"
+                android:gravity="end"
+               />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="143 reviews"/>
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:numStars="5"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="ratingCheck"
+                    android:rating="4"
+                    />
+
+            </LinearLayout>
         </LinearLayout>
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -140,6 +168,26 @@
                 android:text="ADD TO CART" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PRODUCT DESCRIPTION:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#123"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ashdashfohasodfhashfdashdfoahsdfohasdeohoashdfoashfhasodfhaoshfdoahsdfohasdofhaoshdfoahsdfohasdfohasdfohasdfohasodhfaohsdfoashfoahsfd"
+                android:textColor="#7f8183"
+                android:textSize="16sp"
+                />
+
+        </LinearLayout>
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -148,20 +196,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-<FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-                <ImageView
-                    android:id="@+id/similar_products"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/image_product" />
-    <TextView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:text="MAHINDRA"
-        android:gravity="bottom"/>
-</FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/similar_products"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/image_product" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:gravity="bottom"
+                        android:text="MAHINDRA" />
+                </FrameLayout>
             </LinearLayout>
         </HorizontalScrollView>
     </LinearLayout>
